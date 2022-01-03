@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    ul {
+        list-style-type: none;
+    }
+    .msgsend {
+        padding: 10px;
+    }
+</style>
+<div class="input-group mb-3 msgsend">
+    <input class="form-control" type="text" id="msg" placeholder="Message" aria-label="msg">
+    <button type="button" class="btn btn-primary" onclick="send()">Send</button>
+</div>
+<ul id="chat"></ul>
+
+<script>
+    username = "{{ name }}"
+</script>
+
+<script src="/static/js/socket.io.min.js"></script>
+<script src="/static/js/chat.js"></script>
+{% endblock %}

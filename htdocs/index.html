@@ -55,10 +55,6 @@
         </div>
         <div id="openwebrx-panels-container">
             <div id="openwebrx-panels-container-left">
-                <div class="openwebrx-panel" data-panel-name="client-under-devel" style="width: 245px; background-color: Red;">
-                    <span style="font-size: 15pt; font-weight: bold;">Under construction</span>
-                    <br />We're working on the code right now, so the application might fail.
-                </div>
                 <div class="openwebrx-panel" id="openwebrx-panel-digimodes" style="display: none; width: 619px;" data-panel-name="digimodes">
                     <div id="openwebrx-digimode-canvas-container">
                         <div id="openwebrx-digimode-select-channel"></div>
@@ -156,6 +152,17 @@
                             <div>Support and information: <a href="https://groups.io/g/openwebrx" target="_blank">Groups.io Mailinglist</a></div>
                             <div id="openwebrx-debugdiv"></div>
                         </div>
+                    </div>
+                </div>
+                <div class="openwebrx-panel" id="openwebrx-panel-chat" data-panel-name="openwebrx-panel-chat" style="width: 619px;">
+                    <div class="openwebrx-panel-inner nano">
+                        <iframe id="chatframe" src="">
+                            Sorry your browser does not support inline frames.
+                         </iframe>
+                         <script>
+                            chatframe = document.getElementById("chatframe");
+                            chatframe.setAttribute("src", "http://" + document.hostname + ":8074/")
+                        </script>
                     </div>
                 </div>
                 <div class="openwebrx-panel" id="openwebrx-panel-status" data-panel-name="status" style="width: 615px;" data-panel-transparent="true">
